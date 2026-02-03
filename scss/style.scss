@@ -1,0 +1,32 @@
+// global
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_scrollbar";
+@import "global/_fonts";
+@import "global/_normalize";
+@import "global/_reboot";
+@import "global/_container";
+@import "global/_visually-hidden";
+
+// blocks
+
+@import "blocks/_header";
+@import "blocks/_hero";
+@import "blocks/_btn";
+@import "blocks/_features";
+@import "blocks/_bonuses";
+@import "blocks/_vip";
+@import "blocks/_signup";
+@import "blocks/_games";
+@import "blocks/_payments";
+@import "blocks/_mobile";
+@import "blocks/_security";
+@import "blocks/_review";
+@import "blocks/_support";
+@import "blocks/_advantages";
+@import "blocks/_responsible";
+@import "blocks/_faq";
+@import "blocks/_topgames";
+@import "blocks/_games-popular";
+
+@import "blocks/_footer";

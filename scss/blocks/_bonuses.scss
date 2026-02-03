@@ -1,0 +1,186 @@
+.bonuses {
+    padding: 70px 0;
+    background: radial-gradient(
+        circle at top,
+        #1c2352 0%,
+        #0b0f2a 60%,
+        #060814 100%
+    );
+    color: #ffd27d;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 18px;
+        line-height: 1.2;
+        background: linear-gradient(135deg, #ffd27d, #ffb347, #ff4b3e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -14px;
+            width: 72px;
+            height: 4px;
+            background: linear-gradient(135deg, #ffd27d, #ffb347);
+            border-radius: 4px;
+        }
+    }
+
+    &__description {
+        max-width: 900px;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+        color: rgba(255, 210, 125, 0.85);
+    }
+
+    &__table-wrapper {
+        overflow-x: auto;
+        margin-bottom: 50px;
+    }
+
+    &__table {
+        min-width: 600px;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 12px;
+
+        th,
+        td {
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+        }
+
+        th {
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffd27d, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        td {
+            background: linear-gradient(
+                135deg,
+                rgba(255, 210, 125, 0.06),
+                rgba(255, 179, 71, 0.02)
+            );
+            font-weight: 600;
+        }
+
+        tbody tr:hover td {
+            box-shadow: 0 6px 20px rgba(255, 210, 125, 0.3);
+            background: linear-gradient(
+                135deg,
+                rgba(255, 210, 125, 0.14),
+                rgba(255, 179, 71, 0.05)
+            );
+        }
+    }
+
+    &__rules {
+        margin-top: 40px;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg, #ffd27d, #ffb347, #ff4b3e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__list {
+        list-style: none;
+        display: grid;
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    &__list li {
+        position: relative;
+        padding: 18px 22px 18px 56px;
+        border-radius: 14px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 210, 125, 0.08),
+            rgba(255, 179, 71, 0.03)
+        );
+        transition: all 0.35s ease;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #ffd27d, #ffb347);
+            transition: width 0.35s ease;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                circle at left,
+                rgba(255, 210, 125, 0.3),
+                transparent 65%
+            );
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 210, 125, 0.35);
+
+            &::before {
+                width: 8px;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__tip {
+        background: linear-gradient(
+            135deg,
+            rgba(255, 210, 125, 0.16),
+            rgba(255, 179, 71, 0.06)
+        );
+        border-left: 4px solid #ffd27d;
+        padding: 18px 22px;
+        border-radius: 14px;
+        font-size: 16px;
+        box-shadow: 0 6px 22px rgba(255, 210, 125, 0.25);
+
+        strong {
+            color: #ffb347;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__title {
+            font-size: 28px;
+        }
+        &__list li {
+            font-size: 14px;
+            padding: 14px 16px 14px 48px;
+        }
+        &__tip {
+            font-size: 14px;
+        }
+    }
+}

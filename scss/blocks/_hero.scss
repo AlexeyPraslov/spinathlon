@@ -1,0 +1,265 @@
+.hero {
+    margin-top: 80px;
+    background: radial-gradient(
+        circle at top,
+        #1c2352 0%,
+        #0b0f2a 60%,
+        #060814 100%
+    );
+    overflow: hidden;
+    position: relative;
+
+    @include vp-767 {
+        margin-top: 60px;
+    }
+
+    &__top {
+        position: relative;
+        height: calc(100vh - 100px);
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(5, 8, 25, 0.95) 0%,
+                rgba(5, 8, 25, 0.85) 40%,
+                rgba(5, 8, 25, 0.4) 70%,
+                rgba(5, 8, 25, 0.15) 100%
+            );
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            padding-left: 40px;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top right;
+        z-index: 0;
+    }
+
+    &__bonus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-welcome {
+            width: 460px;
+            margin-bottom: -20px;
+        }
+
+        &-percent-img {
+            width: 488px;
+            margin-bottom: -12px;
+        }
+
+        &-freespins-img {
+            width: 160px;
+            margin-bottom: 24px;
+        }
+
+        &-btn {
+            display: inline-block;
+            padding: 20px 56px;
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 3px solid #ffb347;
+            border-radius: 8px;
+            background: linear-gradient(180deg, #ffd27d, #ffb347);
+            color: #060814;
+            box-shadow:
+                0 6px 20px rgba(255, 179, 71, 0.4),
+                inset 0 -3px 0 rgba(217, 138, 28, 0.5);
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow:
+                    0 8px 25px rgba(255, 179, 71, 0.6),
+                    inset 0 -3px 0 rgba(217, 138, 28, 0.7),
+                    0 0 30px rgba(255, 210, 125, 0.5);
+            }
+
+            &:active {
+                transform: translateY(1px);
+                box-shadow: 0 4px 15px rgba(255, 179, 71, 0.4);
+            }
+        }
+    }
+
+    &__rating {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding: 14px 28px;
+        background: rgba(255, 210, 125, 0.15);
+        border-radius: 16px;
+        white-space: nowrap;
+
+        .hero__rating-score-block {
+            .hero__rating-score {
+                font-size: 18px;
+                font-weight: 900;
+                padding: 4px 12px;
+                border: 2px solid #ffd27d;
+                border-radius: 8px;
+                background: rgba(255, 210, 125, 0.05);
+                color: #ffd27d;
+            }
+        }
+
+        .hero__rating-reviews-block,
+        .hero__rating-choice-block {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            .hero__rating-icon {
+                font-size: 18px;
+                color: #ffd27d;
+            }
+
+            .hero__rating-reviews-text,
+            .hero__rating-choice-text {
+                font-size: 14px;
+                font-weight: 600;
+                color: #ffd27d;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            bottom: 30px;
+            gap: 20px;
+            padding: 12px 22px;
+
+            .hero__rating-score-block .hero__rating-score {
+                font-size: 16px;
+                padding: 3px 10px;
+            }
+
+            .hero__rating-reviews-text,
+            .hero__rating-choice-text {
+                font-size: 13px;
+            }
+
+            .hero__rating-icon {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            bottom: 20px;
+            gap: 14px;
+            padding: 10px 18px;
+            background: rgba(255, 210, 125, 0.12);
+            border-radius: 12px;
+
+            .hero__rating-score-block .hero__rating-score {
+                font-size: 15px;
+                padding: 2px 8px;
+                border-width: 1.5px;
+            }
+
+            .hero__rating-reviews-block,
+            .hero__rating-choice-block {
+                gap: 4px;
+            }
+
+            .hero__rating-reviews-text,
+            .hero__rating-choice-text {
+                font-size: 12px;
+            }
+
+            .hero__rating-icon {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            bottom: 16px;
+            gap: 10px;
+            padding: 8px 14px;
+            background: rgba(255, 210, 125, 0.1);
+            border-radius: 10px;
+            font-size: 12px;
+
+            .hero__rating-score-block .hero__rating-score {
+                font-size: 14px;
+                padding: 2px 6px;
+                border-width: 1px;
+            }
+
+            .hero__rating-reviews-block,
+            .hero__rating-choice-block {
+                gap: 3px;
+            }
+
+            .hero__rating-reviews-text,
+            .hero__rating-choice-text {
+                font-size: 11px;
+            }
+
+            .hero__rating-icon {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__bottom {
+        padding: 70px 0 90px;
+    }
+
+    &__seo-title {
+        position: relative;
+        margin-bottom: 32px;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1.2;
+
+        background: linear-gradient(135deg, #ffd27d, #ffb347, #ff4b3e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -14px;
+            width: 72px;
+            height: 4px;
+            background: linear-gradient(135deg, #ffd27d, #ffb347);
+            border-radius: 4px;
+        }
+    }
+
+    &__seo-text {
+        color: rgba(255, 210, 125, 0.85);
+        line-height: 1.7;
+        font-size: 16px;
+        text-align: justify;
+
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+}

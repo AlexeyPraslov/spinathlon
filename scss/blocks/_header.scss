@@ -1,0 +1,108 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: linear-gradient(
+        180deg,
+        rgba(15, 20, 45, 0.95),
+        rgba(10, 14, 35, 0.85)
+    );
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+
+    &__content {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        user-select: none;
+    }
+
+    &__logo-icon {
+        width: 80px;
+        height: auto;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__logo-text {
+        display: flex;
+        font-weight: 900;
+        font-size: 26px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    &__logo-text--light {
+        color: #ffffff;
+    }
+
+    &__logo-text--gold {
+        margin-left: 2px;
+        background: linear-gradient(180deg, #ffd27d, #ffb347, #d98a1c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 10px 24px;
+        background: linear-gradient(135deg, #1a2040, #141830);
+        color: #ffd27d;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 210, 125, 0.3);
+
+        &:hover {
+            background: linear-gradient(135deg, #1e254a, #181c38);
+            border-color: rgba(255, 210, 125, 0.5);
+            transform: translateY(-2px);
+        }
+    }
+
+    @include vp-767 {
+        &__content {
+            height: 60px;
+        }
+
+        &__logo-text {
+            font-size: 18px;
+        }
+
+        &__logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__btn--register {
+            display: none;
+        }
+    }
+}
