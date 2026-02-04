@@ -289,7 +289,11 @@
     /* ================= CTA ================= */
     &__cta-wrapper {
         text-align: center;
-        margin-top: 48px;
+        margin-top: 80px;
+        
+        @media (max-width: 768px) {
+            margin-top: 60px;
+        }
     }
 
     &__cta {
