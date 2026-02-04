@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --electric-border-color: #ff9a00;
   --electric-light-color: oklch(from var(--electric-border-color) l c h);
@@ -11,29 +10,55 @@
 @font-face {
   font-family: "Roboto";
   font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/Roboto-ExtraLight.woff2") format("woff2"), url("../fonts/Roboto-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 600;
-  font-display: swap;
   src: url("../fonts/Roboto-SemiBold.woff2") format("woff2"), url("../fonts/Roboto-SemiBold.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   font-weight: 800;
-  font-display: swap;
   src: url("../fonts/Roboto-ExtraBold.woff2") format("woff2"), url("../fonts/Roboto-ExtraBold.woff") format("woff");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
-  font-display: swap;
   src: url("../fonts/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto-Black.woff") format("woff");
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -503,8 +528,6 @@ p {
   backdrop-filter: blur(6px);
   -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-  /* LOGO */
-  /* ACTIONS */
 }
 .header__content {
   height: 80px;
@@ -616,15 +639,6 @@ p {
   background: radial-gradient(circle at top, #1c2352 0%, #0b0f2a 60%, #060814 100%);
   overflow: hidden;
   position: relative;
-  /* =========================
-     BONUS IMAGES
-  ========================== */
-  /* =========================
-     RATING
-  ========================== */
-  /* =========================
-     BOTTOM SEO
-  ========================== */
 }
 @media (max-width: 767px) {
   .hero {
@@ -642,11 +656,6 @@ p {
   background: -webkit-gradient(linear, left top, right top, from(rgba(5, 8, 25, 0.95)), color-stop(40%, rgba(5, 8, 25, 0.85)), color-stop(70%, rgba(5, 8, 25, 0.4)), to(rgba(5, 8, 25, 0.15)));
   background: linear-gradient(90deg, rgba(5, 8, 25, 0.95) 0%, rgba(5, 8, 25, 0.85) 40%, rgba(5, 8, 25, 0.4) 70%, rgba(5, 8, 25, 0.15) 100%);
   z-index: 1;
-}
-@media (max-width: 767px) {
-  .hero__top::after {
-    display: none;
-  }
 }
 .hero__top .container {
   position: relative;
@@ -744,9 +753,6 @@ p {
   background: rgba(255, 210, 125, 0.15);
   border-radius: 16px;
   white-space: nowrap;
-  /* Адаптивность для планшетов */
-  /* Адаптивность для мобильных */
-  /* Очень маленькие экраны */
 }
 .hero__rating .hero__rating-score-block .hero__rating-score {
   font-size: 18px;
@@ -858,11 +864,9 @@ p {
   font-size: 36px;
   font-weight: 800;
   line-height: 1.2;
-  /* Градиент: золото → оранжево-красный */
   background: linear-gradient(135deg, #ffd27d, #ffb347, #ff4b3e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* Легкая тень для объема */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 .hero__seo-title::after {
@@ -880,13 +884,7 @@ p {
   line-height: 1.7;
   font-size: 16px;
   text-align: justify;
-  /* Легкая тень для читаемости */
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.hero__cta-wrapper {
-  text-align: center;
-  margin-top: 40px;
 }
 
 .btn {
@@ -918,8 +916,6 @@ p {
   transition: all 0.25s ease;
   color: #fff;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), -1px 1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8);
-  /* PRIMARY — оранжевая, как SIGN UP */
-  /* SECONDARY — тёмная с золотым бордером */
 }
 .btn::before {
   content: "";
@@ -1020,7 +1016,6 @@ p {
   overflow-x: auto;
   gap: 24px;
   padding-bottom: 10px;
-  /* кастомный скроллбар */
 }
 .features__slider::-webkit-scrollbar {
   height: 8px;
@@ -1073,11 +1068,6 @@ p {
   color: #ffd27d;
   line-height: 1.4;
 }
-
-.features__cta-wrapper {
-  text-align: center;
-  margin-top: 40px;
-}
 @media (max-width: 1024px) {
   .features__slider {
     gap: 20px;
@@ -1112,11 +1102,6 @@ p {
   padding: 70px 0;
   background: radial-gradient(circle at top, #1c2352 0%, #0b0f2a 60%, #060814 100%);
   color: #ffd27d;
-  /* ================= TABLE ================= */
-  /* ================= RULES ================= */
-  /* ================= PREMIUM LIST ================= */
-  /* ================= TIP ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .bonuses__title {
   font-size: 36px;
@@ -1148,20 +1133,6 @@ p {
 .bonuses__table-wrapper {
   overflow-x: auto;
   margin-bottom: 50px;
-}
-.bonuses__table-wrapper::-webkit-scrollbar {
-  height: 8px;
-}
-.bonuses__table-wrapper::-webkit-scrollbar-track {
-  background: rgba(5, 8, 25, 0.5);
-  border-radius: 4px;
-}
-.bonuses__table-wrapper::-webkit-scrollbar-thumb {
-  background: #ffd27d;
-  border-radius: 4px;
-}
-.bonuses__table-wrapper::-webkit-scrollbar-thumb:hover {
-  background: #ffb347;
 }
 .bonuses__table {
   min-width: 600px;
@@ -1263,11 +1234,6 @@ p {
 .bonuses__tip strong {
   color: #ffb347;
 }
-
-.bonuses__cta-wrapper {
-  text-align: center;
-  margin-top: 40px;
-}
 @media (max-width: 768px) {
   .bonuses__title {
     font-size: 28px;
@@ -1285,11 +1251,6 @@ p {
   padding: 80px 0;
   background: radial-gradient(circle at top, #1a214d 0%, #0a0e26 65%, #050713 100%);
   color: #ffd27d;
-  /* ================= TITLE ================= */
-  /* ================= INTRO ================= */
-  /* ================= VIP LEVELS ================= */
-  /* ================= INFO CARDS ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .vip__title {
   position: relative;
@@ -1408,11 +1369,6 @@ p {
   background: linear-gradient(135deg, rgba(255, 210, 125, 0.18), rgba(255, 179, 71, 0.08));
   border-left: 4px solid #ffd27d;
 }
-
-.vip__cta-wrapper {
-  text-align: center;
-  margin-top: 40px;
-}
 @media (max-width: 992px) {
   .vip__levels {
     grid-template-columns: repeat(2, 1fr);
@@ -1437,11 +1393,6 @@ p {
   padding: 80px 0;
   background: radial-gradient(circle at top, #1b224f 0%, #0a0f27 65%, #050713 100%);
   color: #ffd27d;
-  /* ================= TITLE ================= */
-  /* ================= INTRO ================= */
-  /* ================= STEPS ================= */
-  /* ================= STEP NUM ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .signup__title {
   position: relative;
@@ -1585,11 +1536,6 @@ p {
   padding: 80px 0;
   background: radial-gradient(circle at bottom, #1a214d 0%, #0c0e28 55%, #070915 100%);
   color: #ffd27d;
-  /* ================= TABLES ================= */
-  /* ================= CTA ================= */
-  /* ================= LIVE CASINO ================= */
-  /* ================= QUICK GAMES ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .games__title {
   position: relative;
@@ -2103,36 +2049,7 @@ p {
   font-weight: 700;
   color: #ffd27d;
 }
-@media (max-width: 768px) {
-  .payments__table thead {
-    display: none;
-  }
-  .payments__table tbody tr {
-    display: block;
-    margin-bottom: 16px;
-    border-radius: 12px;
-    background: rgba(255, 210, 125, 0.04);
-    border: 1px solid rgba(255, 210, 125, 0.15);
-  }
-  .payments__table td {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 12px 16px;
-  }
-  .payments__table td::before {
-    content: attr(data-label);
-    font-weight: 700;
-    color: #ffd27d;
-    margin-right: 10px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 120px;
-            flex: 0 0 120px;
-  }
-}
+
 .payments__method {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2418,7 +2335,7 @@ p {
   .payments__table th,
   .payments__table td {
     padding: 12px 16px;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 @media (max-width: 480px) {
@@ -2468,8 +2385,8 @@ p {
   }
   .payments__table th,
   .payments__table td {
-    padding: 10px 12px;
-    font-size: 12px;
+    padding: 8px 10px;
+    font-size: 11px;
   }
   .payments__cta {
     width: 100%;
@@ -2973,7 +2890,6 @@ p {
 @media (max-width: 1024px) {
   .mobile-app {
     padding: 60px 0;
-    /* Скрываем телефон на планшетах и мобилках */
   }
   .mobile-app__title {
     font-size: 32px;
@@ -3092,10 +3008,6 @@ p {
   color: #ffd27d;
   position: relative;
   overflow: hidden;
-  /* ================= GRID ================= */
-  /* ================= CARD ================= */
-  /* ================= LICENSE ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .security__title {
   text-align: center;
@@ -3739,9 +3651,6 @@ p {
   color: #ffd27d;
   position: relative;
   overflow: hidden;
-  /* ================= CARD ================= */
-  /* ================= STATS ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .reviews__title {
   position: relative;
@@ -4825,10 +4734,6 @@ p {
   color: #ffd27d;
   position: relative;
   overflow: hidden;
-  /* ================= GRID ================= */
-  /* ================= CARD ================= */
-  /* ================= SUMMARY ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .advantages__title {
   position: relative;
@@ -5303,7 +5208,6 @@ p {
   color: #ffd27d;
   position: relative;
   overflow: hidden;
-  /* ================= ADAPTIVE ================= */
 }
 .responsible__title {
   position: relative;
@@ -5769,9 +5673,6 @@ p {
   color: #ffd27d;
   position: relative;
   overflow: hidden;
-  /* ================= SLIDER ================= */
-  /* ================= CARD ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .topgames__title {
   position: relative;
@@ -5823,7 +5724,6 @@ p {
     -webkit-overflow-scrolling: touch;
     -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
-    /* кастомный скроллбар */
   }
   .topgames__slider::-webkit-scrollbar {
     height: 8px;
@@ -5975,8 +5875,6 @@ p {
   color: #ffd27d;
   position: relative;
   overflow: hidden;
-  /* ================= OVERLAY ================= */
-  /* ================= ADAPTIVE ================= */
 }
 .games-popular__title {
   position: relative;

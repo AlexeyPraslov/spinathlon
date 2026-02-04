@@ -164,33 +164,7 @@
             }
         }
 
-        @media (max-width: 768px) {
-            thead {
-                display: none;
-            }
 
-            tbody tr {
-                display: block;
-                margin-bottom: 16px;
-                border-radius: 12px;
-                background: rgba(255, 210, 125, 0.04);
-                border: 1px solid rgba(255, 210, 125, 0.15);
-            }
-
-            td {
-                display: flex;
-                justify-content: space-between;
-                padding: 12px 16px;
-
-                &::before {
-                    content: attr(data-label);
-                    font-weight: 700;
-                    color: #ffd27d;
-                    margin-right: 10px;
-                    flex: 0 0 120px;
-                }
-            }
-        }
     }
 
     &__method {
@@ -490,7 +464,7 @@
             th,
             td {
                 padding: 12px 16px;
-                font-size: 13px;
+                font-size: 12px;
             }
         }
     }
@@ -553,8 +527,8 @@
 
             th,
             td {
-                padding: 10px 12px;
-                font-size: 12px;
+                padding: 8px 10px;
+                font-size: 11px;
             }
         }
 
